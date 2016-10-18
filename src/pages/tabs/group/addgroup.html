@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add Group
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button fab (click)="saveGroup()">
+        Save!
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label clolor="primary" floating >Group Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating >Group Type</ion-label>
+      <ion-select>
+        <ion-option value="0">choise</ion-option>
+        <ion-option value="t1">test</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label clolor="primary" floating >Group Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

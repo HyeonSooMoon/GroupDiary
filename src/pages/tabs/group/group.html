@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Group List
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button ion-only round large color="secondary" (click)="setGroup()">
+        <ion-icon name="add-circle" style="font-size:2em;"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let repo of foundRepos">
+    <ion-card-header>
+      {{repo._id}}
+    </ion-card-header>
+    <ion-card-content>
+      {{repo.pay}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

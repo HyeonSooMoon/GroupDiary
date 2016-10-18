@@ -1,0 +1,48 @@
+<div>
+  <ion-slides #monthSlider
+              [options]="slideOption"
+              (ionDidChange)="onSlideChanged()">
+    <ion-slide *ngFor="let view of views; let viewIndex=index">
+        <table *ngIf="viewIndex===currentViewIndex" class="table table-bordered table-fixed monthview-datetable">
+          <thead>
+            <tr>
+              <th *ngFor="let day of view.dates.slice(0,7)">
+                <small>{{day.date | date: formatDayHeader}}</small>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of [0,1,2,3,4,5]">
+              <td *ngFor="let col of [0,1,2,3,4,5,6]" (click)="select(view.dates[row*7+col].date, view.dates[row*7+col].events)"
+              [ngClass]="getHighlightClass(view.dates[row*7+col])">{{view.dates[row*7+col].label}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table *ngIf="viewIndex!==currentViewIndex" class="table table-bordered table-fixed monthview-datetable\">
+        <thead>
+          <tr class="text-center">
+            <th *ngFor="let day of view.dates.slice(0,7)">
+              <small>{{day.date | date: formatDayHeader}}</small>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of [0,1,2,3,4,5]">
+            <td *ngFor="let col of [0,1,2,3,4,5,6]">{{view.dates[row*7+col].label}}</td>
+          <tr>
+        </tbody>
+      </table>
+    </ion-slide>
+  </ion-slides>
+  <ion-list class="event-detail-container2" has-bouncing="false" *ngIf="showEventDetail" overflow-scroll="false">
+    <ion-item *ngFor="let event of selectedDate?.events" (click)="eventSelected(event)">
+      <span *ngIf="!event.allDay" class="monthview-eventdetail-timecolumn">{{event.startTime|date: 'HH:mm'}} -{{event.endTime|date: 'HH:mm'}}</span>
+      <span *ngIf="event.allDay" class="monthview-eventdetail-timecolumn">All day</span>
+      <span class="event-detail">|{{event.title}}</span>
+    </ion-item>
+    <ion-item *ngIf="!selectedDate?.events">
+      <td class="no-events-label">{{noEventsLabel}}</td>
+    </ion-item>
+  </ion-list>
+</div>

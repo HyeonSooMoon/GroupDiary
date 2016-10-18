@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+
+import { CalendarPage } from './calendar/calendar';
+import { GroupPage } from './group/group';
+import { MsgPage } from './messege/messege';
+import { SettingPage } from './setting/setting';
+
+@Component({
+  templateUrl: 'tabs.html'
+})
+export class TabsPage {
+  // this tells the tabs component which Pages
+  // should be each tab's root Page
+  tab0Root: any = GroupPage;
+  tab1Root: any = GroupPage;
+  tab2Root: any = CalendarPage;
+  tab3Root: any = MsgPage;
+  tab4Root: any = SettingPage;
+
+  constructor() {
+
+  }
+}

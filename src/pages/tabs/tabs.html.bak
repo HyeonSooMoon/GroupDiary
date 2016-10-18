@@ -1,0 +1,7 @@
+<ion-tabs>
+	<ion-tab [root]="tab0Root" tabTitle="Group" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="tab1Root" tabTitle="Group" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Calendar" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Messege" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Setting" tabIcon="contacts"></ion-tab>
+</ion-tabs>

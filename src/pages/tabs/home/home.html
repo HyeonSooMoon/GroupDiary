@@ -1,0 +1,49 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--ion-header>
+  <ion-navbar>
+    <ion-title>
+      home
+    </ion-title>
+  </ion-navbar>
+</ion-header-->
+
+
+<ion-content padding class="card-background-page">
+	<ion-grid>
+		<ion-row>
+			<ion-col width-50>
+				<ion-card (click)="onMenuClick('diary')">
+					<img src="../../../assets/img/diary.png"/>
+			    <div class="card-title">Diary</div>
+			    <div class="card-subtitle">All Working<ion-badge item-right>20</ion-badge></div>
+			  </ion-card>
+			</ion-col>
+
+			<ion-col width-50>
+				<ion-card (click)="onMenuClick('friands')">
+					<img src="../../../assets/img/diary.png"/>
+			    <div class="card-title">Friands</div>
+			    <div class="card-subtitle">My friands<ion-badge item-right>20</ion-badge></div>
+			  </ion-card>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col width-50>
+				<ion-card (click)="onMenuClick('GD')">
+					<img src="../../../assets/img/diary.png"/>
+			    <div class="card-title">Group</div>
+			    <div class="card-subtitle">My Group<ion-badge item-right>20</ion-badge></div>
+			  </ion-card>
+			</ion-col>
+			<ion-col width-50>
+				<ion-card (click)="onMenuClick('calendar')">
+					<img src="../../../assets/img/diary.png"/>
+			    <div class="card-title">Calendar</div>
+			    <div class="card-subtitle">Group 관리<ion-badge item-right>20</ion-badge></div>
+			  </ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

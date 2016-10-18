@@ -1,0 +1,53 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--ion-header>
+  <ion-navbar>
+    <ion-title>
+      home
+    </ion-title>
+  </ion-navbar>
+</ion-header-->
+
+
+<ion-content padding class="card-background-page">
+<ion-card>
+					<img src="../../../assets/img/diary.png"/>
+			    <div class="card-title">Diary</div>
+			    <div class="card-subtitle">All Working<ion-badge item-right>20</ion-badge></div>
+			  </ion-card>
+</ion-content>
+<ion-content padding>			  
+	<ion-grid>
+		<ion-row>
+			<ion-col width-50>
+				<ion-card>
+					<img src="../../../assets/img/diary.png"/>
+			    <div class="card-title">Diary</div>
+			    <div class="card-subtitle">All Working<ion-badge item-right>20</ion-badge></div>
+			  </ion-card>
+			</ion-col>
+			
+			<ion-col width-50>
+				<ion-card >
+			    <div class="card-title">Friand</div>
+			    <!--<div class="card-subtitle"></div>-->
+			  </ion-card>
+			</ion-col>
+		</ion-row>					
+		<ion-row>
+			<ion-col width-50>
+				<ion-card >
+			    <div class="card-title">Group</div>
+			    <!--<div class="card-subtitle"></div>-->
+			  </ion-card>
+			</ion-col>
+			<ion-col width-50>
+				<ion-card >
+			    <div class="card-title">Search Group</div>
+			    <!--<div class="card-subtitle"></div>-->
+			  </ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

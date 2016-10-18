@@ -1,0 +1,33 @@
+import { NgModule } from '@angular/core';
+import { IonicApp, IonicModule } from 'ionic-angular';
+import { MyApp } from './app.component';
+import { TabsPage } from '../pages/tabs/tabs';
+import { MsgPage } from '../pages/tabs/messege/messege';
+import { GroupPage } from '../pages/tabs/group/group';
+import { CalendarPage } from '../pages/tabs/calendar/calendar';
+import { SettingPage } from '../pages/tabs/setting/setting';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    MsgPage,
+    GroupPage,
+    CalendarPage,
+    SettingPage,   
+    TabsPage
+  ],
+  imports: [
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    MsgPage,
+    GroupPage,
+    CalendarPage,
+    SettingPage,   
+    TabsPage
+  ],
+  providers: []
+})
+export class AppModule {}
